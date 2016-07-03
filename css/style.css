@@ -1,0 +1,96 @@
+
+
+
+body {
+    background-color: #004A7F;
+}
+
+
+
+h1 {
+    margin: 1em auto;
+    width: 600px;
+    text-align: center;
+    color: white;
+    font-family: 'Aldrich', sans-serif;
+}
+
+
+
+
+
+
+
+
+/*Form */
+
+
+
+form {
+    margin: 4em auto;
+    width: 400px;
+}
+
+
+fieldset {
+    position: relative;
+    float: left;
+    clear: both;
+    width: 100%;
+    border: 1px solid #BFBAB0;
+    margin: 1.5em 0 0 0;
+    padding: 0 0 1em 0;
+    background-color: #4B697F;
+    border-radius: 4%;
+
+}
+
+legend {
+     color:  #000000;
+    font-weight: bold;
+    padding: 0;
+
+}
+
+fieldset ol {
+    padding: 3.5em 1em 0 1em;
+    list-style: none;
+
+}
+
+fieldset li {
+    padding-bottom: 1em;
+}
+
+.submit {
+    float: none;
+    width: auto;
+    padding-top: 1.5em;
+    padding-left: 6em;
+    border-style: none;
+    background-color:  #004A7F;
+}
+
+
+.button {
+    margin-left: 3em;
+    font-size: 120%;
+    border-radius: 4%;
+}
+
+
+label {
+    float: left;
+    width: 6em;
+    margin-right: 1em;
+    text-align: right;
+}
+
+
+legend span {
+    margin-top: 1em;
+    position: absolute;
+    left: 6.7em;
+    font-size: 145%;
+    top: 0;
+        }
