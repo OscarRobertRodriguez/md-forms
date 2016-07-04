@@ -1,0 +1,151 @@
+
+
+
+
+
+
+body {
+    background-color: hsla(200, 66%, 47%, 0.49);
+}
+
+
+
+
+
+
+
+/* Form */
+
+
+
+
+::-webkit-input-placeholder {
+ font-size: 14px;
+ color: #black;
+ text-transform: uppercase;
+ text-transform: uppercase;
+ text-align: center;
+ font-weight: bold;
+}
+:-moz-placeholder { /* older Firefox*/
+ font-size:14px;
+ color: black;
+ text-transform: uppercase;
+ text-align: center;
+ font-weight: bold;
+}
+::-moz-placeholder { /* Firefox 19+ */
+ font-size: 14px;
+ color: black;
+ text-transform: uppercase;
+ text-align: center;
+ font-weight: bold;
+}
+:-ms-input-placeholder {
+ font-size: 14px;
+ color: black;
+ text-transform: uppercase;
+ text-align: center;
+ font-weight: bold;
+}
+
+
+
+
+
+
+form {
+    margin: 1em auto;
+    width: 900px;
+
+}
+
+fieldset {
+    position: relative;
+    float: left;
+    clear: both;
+    margin: 2px;
+    width: 100%;
+    background-color: hsla(214, 37%, 42%, 0.49);
+}
+
+
+legend {
+    font-weight: bold;
+    padding: 0;
+}
+
+fieldset ol {
+    list-style: none;
+    padding: 3.5em 1em 0 1em;
+}
+
+fieldset li {
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    width: 100%;
+    margin-bottom: 1em;
+
+
+
+}
+
+input {
+    position: relative;
+    left: 8em;
+    width: 80%;
+    height: 4em;
+    text-align: center;
+
+}
+
+select {
+    position: relative;
+    left: 8em;
+    height: 5em;
+    width: 80%;
+ text-align: center;
+}
+
+
+
+optgroup {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+
+
+label {
+    position: relative;
+    bottom: .5em;
+    display: block;
+    padding: 0;
+    width: 6em;
+    text-align: center;
+    font-size: 160%;
+    margin: 0 auto;
+    font-family: "arial";
+
+}
+
+
+button {
+    position: relative;
+    bottom: .5em;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+
+
+}
+
+span {
+    position: absolute;
+    top: 1em;
+    left: 15em;
+    font-size: 150%;
+
+}
