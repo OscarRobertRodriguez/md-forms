@@ -1,0 +1,80 @@
+
+
+body {
+    background: url(../../images/flash.jpg) repeat-x;
+    background-color: blue;
+    background-position: 55px 160px;
+}
+
+
+
+/*Images*/
+
+
+.flash {
+    position: absolute;
+    width: 900px;
+    left: 35%;
+
+
+}
+
+
+/*Form*/
+
+form {
+
+    margin: 0 auto;
+    margin-top: 10em;
+    width:  600px;
+
+}
+
+
+fieldset {
+    position: relative;
+    float: left;
+    width: 100%;
+    clear: both;
+    margin-bottom: 1.5em;
+     background: url(../../images/flash.jpg);
+     border: none;
+}
+
+
+fieldset ol  {
+    list-style: none;
+    padding: .5em;
+    padding-left: 2em;
+}
+
+ol li {
+    padding-bottom: 1em;
+}
+
+fieldset label {
+    font-size: 2em;
+    margin-left: 10px;
+    font-weight: bold;
+
+}
+
+input[type="radio"] {
+    width: 30px;
+    height: 20px;
+}
+
+input[type="text"]  {
+    position: relative;
+    right: 15px;
+    width:  100%;
+    height: 50px;
+    font-size: 30px;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 5em;
+    color: white;
+}
