@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/billing/style.css" />
+</head>
+<body>
+
+    <form>
+        <fieldset class="fieldOne">
+            <legend>Billing Address</legend>
+            <ol>
+                  <li class="requiredInfo">
+                    <p><span class="required">*</span> indicates required field</p>
+                  </li>
+                  <li>
+                    <label>First Name:<span class="required">*</span></label>
+                    <input type="text" name="firstName" placeholder="first name" />
+                </li>
+
+                <li>
+                    <label>Last Name:<span class="required">*</span></label>
+                    <input type="text" name="lastName" placeholder="last name" />
+                </li>
+
+                <li>
+                    <label>Address:<span class="required">*</span></label>
+                    <input type="text" name="address" />
+                </li>
+
+                <li>
+                    <label>City:<span class="required">*</span></label>
+                    <input type="text" name="city" />
+                </li>
+
+                <li>
+                    <label>State:<span class="required">*</span></label>
+                    <input class="state" type="text" name="state" maxlength="2" />
+
+                </li>
+
+                <li>
+                    <label>Country:<span class="required">*</span></label>
+                    <input type="text" name="state" />
+                </li>
+
+                <li>
+                    <label>Zipcode:<span class="required">*</span></label>
+                    <input type="text" name="zipcode" />
+                </li>
+            </ol>
+        </fieldset>
+
+        <fieldset class="fieldTwo">
+
+            <legend>Shipping Address</legend>
+            <ol>
+                <li class="same">
+                    <p>
+                        <input type="checkbox" />
+                    </p>
+                    <label>Same a billing address</label>
+
+                </li>
+
+                <li>
+                    <label>First Name:<span class="required">*</span></label>
+                    <input type="text" name="firstName" placeholder="first name" />
+                </li>
+
+                <li>
+                    <label>Last Name:<span class="required">*</span></label>
+                    <input type="text" name="lastName" placeholder="last name" />
+                </li>
+
+                <li>
+                    <label>Address:<span class="required">*</span></label>
+                    <input type="number" name="address" />
+                </li>
+
+                <li>
+                    <label>City:<span class="required">*</span></label>
+                    <input  type="text" name="city" />
+                </li>
+
+                <li>
+                    <label>State:<span class="required">*</span></label>
+                    <input class="state" type="text" name="state" maxlength="2"  />
+                </li>
+
+                <li>
+                    <label>Country:<span class="required">*</span></label>
+                    <input type="text" name="state" />
+                </li>
+
+                <li>
+                    <label>Zipcode:<span class="required">*</span></label>
+                    <input type="number" name="zipcode" />
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset class="fieldThree">
+            <button type="submit" value="Place Order">Place Order</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>

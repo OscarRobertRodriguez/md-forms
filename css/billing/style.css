@@ -1,0 +1,108 @@
+body {
+    background-color: beige;
+}
+
+form {
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+
+fieldset {
+    position:relative;
+    width: 400px;
+    float: left;
+    margin: 0 auto;
+    background-color:beige;
+    border: 2px solid brown;
+}
+
+
+ol li {
+    list-style: none;
+    padding: .5em;
+}
+
+label {
+    display: block;
+    padding-bottom: 5px;
+}
+
+li input {
+
+}
+
+
+.same {
+    position: absolute;
+    left: 250px;
+    width:200px;
+    top:10px;
+    font-weight:600;
+}
+
+.same p {
+    position:relative;
+    float:left;
+    bottom: 15px;
+    right: 20px;
+
+}
+
+.same label {
+    position:relative;
+    right:15px;
+    padding:0;
+    margin:0;
+    overflow: hidden;
+
+}
+.state {
+    width: 20px;
+}
+
+
+.example {
+    display:inline-block;
+    margin-left:5px;
+}
+
+legend {
+    font-weight:bold;
+}
+
+.fieldThree {
+    clear:both;
+    width:828px;
+    text-align:center;
+    margin-top: 20px;
+    border:none;
+}
+
+.fieldOne {
+    border-right:none;
+}
+
+.required {
+    color:red;
+    margin-left:2px;
+}
+
+.requiredInfo {
+    position:absolute;
+    bottom:0;
+    left:250px;
+    padding:0;
+    margin:0;
+    font-size:14px;
+}
+
+button {
+    width: 50%;
+    margin:0 auto;
+    height: 44px;
+    background-color:darkorange;
+    font-size: 20px;
+    font-weight:bolder;
+}
