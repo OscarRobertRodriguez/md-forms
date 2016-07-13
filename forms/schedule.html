@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Schedule Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/schedule/style.css">
+</head>
+<body>
+
+<h1>Schedule Today</h1>
+
+<form method="post">
+
+<fieldset class="fieldOne">
+    <legend>Choose Appointment Time</legend>
+    <ul>
+        <li>
+            <label>Date:<input type="date" name="date" class="move"></label>
+        </li>
+        <li>
+            <label>Time:<input type="time" name="time" class="move"></label>
+        </li>
+        <li>
+            <label>Timezone:<input type="timedate" name="time_zone"></label>
+        </li>
+    </ul>
+    </fieldset>
+    <fieldset>
+    <legend>Contact Info</legend>
+    <ul>
+        <li>
+            <label>Message:<br>
+            <p>Any questions about service type here:<br>
+                <textarea rows="10" cols="50" placeholder="limit to 100 words" maxlength="100"></textarea>
+            </label></p>
+        </li>
+        <li>
+            <label>Phone:<input type="tel" name="phone"></label>
+        </li>
+        <li>
+            <label>Email:<input type="email" name="email"></label>
+        </li>
+
+    </ul>
+    </fieldset>
+
+    <button value="submit" class="submit"> Make Appointment</button>
+
+</form>
+</body>
+</html>

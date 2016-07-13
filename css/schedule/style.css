@@ -1,0 +1,70 @@
+ul , ol {
+    list-style: none;
+}
+
+body {
+    font-size:20px;
+    background-color:lightblue;
+}
+
+
+form {
+    width: 600px;
+    margin: 0 auto;
+}
+
+fieldset {
+    margin-top:-10px;;
+}
+
+.fieldOne {
+    border-bottom-style:none;
+    margin-top:15px;
+}
+legend {
+   
+    text-align: center;
+    font-weight: bold;
+}
+
+h1 {
+    position:relative;
+    left: 20px;
+    margin: 20px auto;
+    width: 300px;
+}
+
+input {
+    display: block;
+    position: relative;
+    left: 150px;
+    margin-bottom:15px;
+    width:200px;
+    height: 30px;
+    margin-left: 10px;
+    text-align:center;
+    font-size:1.2em;
+}
+
+
+
+label {
+   
+
+}
+
+ul li {
+    text-align:center;
+}
+
+.submit {
+    width: 400px;
+    height: 40px;
+    margin-left: 100px;
+    margin-top: 15px;
+    background-color: orange;
+    border: 2px solid black;
+    font-size: 20px;
+
+   
+}
