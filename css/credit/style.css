@@ -1,0 +1,88 @@
+
+
+body {
+
+    * Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,207cca+30,207cca+44,7db9e8+100 */
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(top, #1e5799 0%, #207cca 30%, #207cca 44%, #7db9e8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #1e5799 0%,#207cca 30%,#207cca 44%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #1e5799 0%,#207cca 30%,#207cca 44%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+
+ul, ol {
+    list-style:none;
+}
+
+
+
+form {
+    width: 400px;
+    margin: 0 auto;
+
+}
+
+
+fieldset {
+    margin-top: 200px;
+    padding: 1em;
+    border: 5px double #ccc;
+    border-radius: 5px;
+}
+
+legend {
+    border: 2px solid white;
+    background-color: ivory;
+    border-radius:5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+ label {
+     position: relative;
+     bottom: 20px;
+    float: left;
+    text-align: right;
+    font-size: 18px;
+
+}
+
+input, select {
+    padding: 5px;
+    margin-right: 20px;
+    margin-top: 15px;
+
+}
+
+li {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.csv {
+    width: 30px;
+}
+
+
+input[type="submit"] {
+    width: 400px;
+    height: 32px;
+    border: none;
+    background-color: lightblue;
+    border-radius: 5px;
+    focus outline: none;
+    font-size:20px;
+
+
+ }
+
+ input[type="submit"]:hover {
+    color:white;
+ }
+
+ input[type="submit"]:active {
+    position: relative;
+    top:2px;
+    left:2px;
+    color:white;
+ }
