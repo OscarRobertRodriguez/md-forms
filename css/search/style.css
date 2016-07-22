@@ -6,6 +6,7 @@
 
 body {
     background-color: hsla(200, 66%, 47%, 0.49);
+    font-size: 100%;
 }
 
 
@@ -94,15 +95,16 @@ input {
     position: relative;
     left: 8em;
     width: 80%;
-    height: 4em;
+    height: 6em;
     text-align: center;
+
 
 }
 
 select {
     position: relative;
     left: 8em;
-    height: 5em;
+    height: 6em;
     width: 80%;
  text-align: center;
 }
