@@ -1,0 +1,151 @@
+/* Navigation Bar*/
+
+
+
+nav {
+    position: fixed;
+    top:0;
+    left: 0;
+    overflow: hidden;
+     width: 100%;
+     height: 4.6em;
+    background-color: #0068b8;
+    background-image: url("https://www.transparenttextures.com/patterns/ravenna.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    margin-top: 0;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0 auto;
+    width: 50em;
+    padding: 0;
+}
+
+
+
+nav ul li {
+    float: left;
+
+}
+
+nav ul li a {
+    display: block;
+    padding: .7em;
+    border: 1px solid white;
+    border-radius: .5em;
+    margin-top: 1em ;
+    margin-left: 1.5em;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-variant: small-caps;
+
+}
+
+nav ul a:focus {
+    co: #fff;
+}
+
+nav ul a:hover {
+    background-color: #0068b8;
+    color: white;
+    border: 1px solid #0068b8;
+
+}
+
+nav ul a:active {
+    position:relative;
+    bottom: .3em;
+    left: .2em;
+    color: #fff;
+
+
+}
+
+/*End Navigation*/
+
+
+
+/* Main Heading */
+
+body {
+    font-size: 100%;
+    width: 100%;
+    background-color: #004f94;
+background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 3em;
+    width: 10em;
+    font-size: 3em;
+    font-variant: small-caps;
+    color: lightgrey;
+}
+
+
+/* Form Styling */
+
+form {
+    margin: 0 auto;
+    margin-top: 2em;
+    width:   35em;
+}
+
+legend {
+    text-align: center;
+    font-size: 2em;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: lightgrey;
+}
+
+fieldset ol {
+    list-style: none;
+}
+
+fieldset ol li {
+    display: block;
+    margin-top: 1em;
+    float: left;
+    margin-left: 1em;
+    clear: left;
+}
+
+fieldset ol li label {
+    margin-left: 3em;
+    color: white;
+    font-variant: small-caps;
+    font-size: 1.5em;
+}
+
+fieldset ol li input {
+    text-align: t;
+    margin-left: 2em;
+}
+
+.formInput {
+    border-left: none;
+    border-right: none;
+}
+
+.submit {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1em;
+    border: none;
+    width:10em;
+    font-size: 2em;
+}
+
+
+.button {
+    width: 10em;
+
+}
