@@ -149,3 +149,16 @@ fieldset ol li input {
     width: 10em;
 
 }
+
+
+/* Footer */
+
+footer {
+    margin-top: 2em;
+    color: #fff;
+    text-align: center;
+    font-size: small;
+    font-variant: small-caps;
+
+
+}
