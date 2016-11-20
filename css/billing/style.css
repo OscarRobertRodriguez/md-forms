@@ -7,6 +7,7 @@
 
 
 nav {
+    z-index:1000;
     position: fixed;
     top:0;
     left: 0;
@@ -96,20 +97,35 @@ fieldset {
 }
 
 
+ol {
+
+    padding: 0;
+}
+
 ol li {
     list-style: none;
     padding: .5em;
+    margin: 0;
+
 }
 
 label {
     display: block;
     padding-bottom: 5px;
+    width: 100px;
 }
 
 li input {
 
 }
 
+input {
+    display: inline-block;
+    height: 23px;
+    font-size: 13px;
+    width: 150px;
+    padding: 5px;
+}
 
 .same {
     position: absolute;
@@ -129,6 +145,10 @@ li input {
 
 .same label {
     position:relative;
+    width: 120px;
+    right: 15px;
+    left: 8px;
+    bottom: 52px;
     right:15px;
     padding:0;
     margin:0;
@@ -166,6 +186,9 @@ legend {
     margin-left:2px;
 }
 
+.notSame {
+    visibility: hidden;
+}
 .requiredInfo {
     position:absolute;
     bottom:0;
@@ -194,4 +217,65 @@ footer {
     font-variant: small-caps;
 
 
+}
+
+
+
+/* validation styles for form */
+
+.error img {
+    float: left;
+}
+
+.error {
+   position: relative;
+    top: 22px;
+    width: 200px;
+    border: 1px solid #D8D8D8;
+    padding: 3px;
+    border-radius: 5px;
+    font-family: Arial;
+    font-size: 10px;
+    text-transform: uppercase;
+    background-color: rgb(255, 249, 242);
+    color: rgb(211, 0, 0);
+    text-align: center;
+    display: none;
+}
+
+
+
+
+.correct  {
+    float: right;
+    position: relative;
+    right: 190px;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+
+}
+
+.wrong {
+    float: right;
+    position: relative;
+    top: 5px;
+    right: 190px;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+input:valid {
+    color:green;
+    border: 2px solid green;
+}
+
+
+input[value=""]:invalid {
+    color: red;
+    border: 2px solid red;
 }

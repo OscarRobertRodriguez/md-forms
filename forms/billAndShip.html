@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/billing/style.css" />
+    <script type="text/javascript" src="../js/validator.js" ></script>
 </head>
 <body>
 
@@ -19,47 +20,123 @@
 </ul>
 </nav>
 
-    <form>
+    <form id="form1">
         <fieldset class="fieldOne">
-            <legend>Billing Address</legend>
+            <legend id="lengend1">Billing Address</legend>
             <ol>
+                <li class="same notSame">
+                    <p>
+                        <input id= "check1" type="checkbox" onclick="notSameAsBill(this)" title="please input valid name" />
+                    </p>
+                    <label>Different Shipping address</label>
+
+                </li>
                   <li class="requiredInfo">
                     <p><span class="required">*</span> indicates required field</p>
                   </li>
                   <li>
-                    <label>First Name:<span class="required">*</span></label>
-                    <input type="text" name="firstName" placeholder="first name" />
+                    <label style="width:100px;">First Name:<span class="required">*</span></label>
+                      <input id="billName" class="withoutSymbols validate" type="text"  placeholder="first name" minlength="2" required/>
+                      <img  class="correct"  src="../images/correct.png" style="display: none">
+                      <img  class="wrong" src="../images/error.png"  style="display: none">
                 </li>
+
+
 
                 <li>
                     <label>Last Name:<span class="required">*</span></label>
-                    <input type="text" name="lastName" placeholder="last name" />
+                    <input id = "lastName" class="withoutSymbols validate" type="text" name="lastName" placeholder="last name" minlength="2"  required/>
+                    <img  class="correct"  src="../images/correct.png" style="display: none">
+                    <img  class="wrong" src="../images/error.png"  style="display: none">
                 </li>
 
                 <li>
                     <label>Address:<span class="required">*</span></label>
-                    <input type="text" name="address" />
+                    <input id="address" class="validate" type="text" name="address" required/>
+                      <img  class="correct"  src="../images/correct.png" style="display: none">
+                    <img  class="wrong" src="../images/error.png"  style="display: none">
                 </li>
 
                 <li>
                     <label>City:<span class="required">*</span></label>
-                    <input type="text" name="city" />
+                    <input id="city" class="validate"  type="text" name="city" required/>
+                      <img  class="correct"  src="../images/correct.png" style="display: none">
+                    <img  class="wrong" src="../images/error.png"  style="display: none">
                 </li>
 
                 <li>
                     <label>State:<span class="required">*</span></label>
-                    <input class="state" type="text" name="state" maxlength="2" />
+                    <select name="state" class="states" required="" >
+                        <option selected value="">Where?</option>
+                        <option value="AL">AL</option>
+                        <option value="AK">AK</option>
+                        <option value="AZ">AZ</option>
+                        <option value="AR">AR</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="DE">DE</option>
+                        <option value="DC">DC</option>
+                        <option value="FL">FL</option>
+                        <option value="GA">GA</option>
+                        <option value="HI">HI</option>
+                        <option value="ID">ID</option>
+                        <option value="IL">IL</option>
+                        <option value="IN">IN</option>
+                        <option value="IA">IA</option>
+                        <option value="KS">KS</option>
+                        <option value="KY">KY</option>
+                        <option value="LA">LA</option>
+                        <option value="ME">ME</option>
+                        <option value="MD">MD</option>
+                        <option value="MA">MA</option>
+                        <option value="MI">MI</option>
+                        <option value="MN">MN</option>
+                        <option value="MS">MS</option>
+                        <option value="MO">MO</option>
+                        <option value="MT">MT</option>
+                        <option value="NE">NE</option>
+                        <option value="NV">NV</option>
+                        <option value="NH">NH</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NM">NM</option>
+                        <option value="NY">NY</option>
+                        <option value="NC">NC</option>
+                        <option value="ND">ND</option>
+                        <option value="OH">OH</option>
+                        <option value="OK">OK</option>
+                        <option value="OR">OR</option>
+                        <option value="PA">PA</option>
+                        <option value="RI">RI</option>
+                        <option value="SC">SC</option>
+                        <option value="SD">SD</option>
+                        <option value="TN">TN</option>
+                        <option value="TX">TX</option>
+                        <option value="UT">UT</option>
+                        <option value="VT">VT</option>
+                        <option value="VA">VA</option>
+                        <option value="WA">WA</option>
+                        <option value="WV">WV</option>
+                        <option value="WI">WI</option>
+                        <option value="WY">WY</option>
+                    </select>
+                    <img  class="correct"  src="../images/correct.png" style="display: none">
+                    <img  class="wrong" src="../images/error.png"  style="display: none">
 
                 </li>
 
                 <li>
                     <label>Country:<span class="required">*</span></label>
-                    <input type="text" name="state" />
+                    <input id="country1" class="validate" type="text" name="state" required/>
+                    <img  class="correct"  src="../images/correct.png" style="display: none">
+                    <img  class="wrong" src="../images/error.png"  style="display: none">
                 </li>
 
                 <li>
                     <label>Zipcode:<span class="required">*</span></label>
-                    <input type="text" name="zipcode" />
+                    <input id="zipcode1" class="validate zipcode" type="text" name="zipcode" minlength="6" required/>
+                    <img  class="correct"  src="../images/correct.png" style="display: none">
+                    <img  class="wrong" src="../images/error.png"  style="display: none">
                 </li>
             </ol>
         </fieldset>
@@ -70,45 +147,112 @@
             <ol>
                 <li class="same">
                     <p>
-                        <input type="checkbox" />
+                        <input id="check2" type="checkbox"  onchange="SameAsBill(this)" />
                     </p>
-                    <label>Same a billing address</label>
+                    <label>Same as Billing</label>
 
                 </li>
 
                 <li>
                     <label>First Name:<span class="required">*</span></label>
-                    <input type="text" name="firstName" placeholder="first name" />
+                    <input class="withoutSymbols inputShip" type="text"  placeholder="first name" minlength="2" required />
+                    <img  class="correct"  src="../images/correct.png" style="display: none">
+                    <img  class="wrong" src="../images/error.png" id="firstNameWrong" style="display: none">
                 </li>
 
                 <li>
                     <label>Last Name:<span class="required">*</span></label>
-                    <input type="text" name="lastName" placeholder="last name" />
+                    <input class="withoutSymbols inputShip" type="text"  placeholder="last name" minlength="2" required />
+                    <img  class="correct"  src="../images/correct.png" style="display: none">
+                    <img  class="wrong" src="../images/error.png"  style="display: none">
                 </li>
 
                 <li>
                     <label>Address:<span class="required">*</span></label>
-                    <input type="number" name="address" />
+                    <input class="inputShip validate" type="text" name="address" required />
+                    <img  class="correct"  src="../images/correct.png" style="display: none">
+                    <img  class="wrong" src="../images/error.png"  style="display: none">
                 </li>
 
                 <li>
                     <label>City:<span class="required">*</span></label>
-                    <input  type="text" name="city" />
+                    <input  class="inputShip validate" type="text" name="city" required />
+                    <img  class="correct"  src="../images/correct.png" style="display: none">
+                    <img  class="wrong" src="../images/error.png"  style="display: none">
                 </li>
 
                 <li>
                     <label>State:<span class="required">*</span></label>
-                    <input class="state" type="text" name="state" maxlength="2"  />
+                    <select name="state" class="states" required="" >
+                        <option  selected value="">Where?</option>
+                        <option value="AL">AL</option>
+                        <option value="AK">AK</option>
+                        <option value="AZ">AZ</option>
+                        <option value="AR">AR</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="DE">DE</option>
+                        <option value="DC">DC</option>
+                        <option value="FL">FL</option>
+                        <option value="GA">GA</option>
+                        <option value="HI">HI</option>
+                        <option value="ID">ID</option>
+                        <option value="IL">IL</option>
+                        <option value="IN">IN</option>
+                        <option value="IA">IA</option>
+                        <option value="KS">KS</option>
+                        <option value="KY">KY</option>
+                        <option value="LA">LA</option>
+                        <option value="ME">ME</option>
+                        <option value="MD">MD</option>
+                        <option value="MA">MA</option>
+                        <option value="MI">MI</option>
+                        <option value="MN">MN</option>
+                        <option value="MS">MS</option>
+                        <option value="MO">MO</option>
+                        <option value="MT">MT</option>
+                        <option value="NE">NE</option>
+                        <option value="NV">NV</option>
+                        <option value="NH">NH</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NM">NM</option>
+                        <option value="NY">NY</option>
+                        <option value="NC">NC</option>
+                        <option value="ND">ND</option>
+                        <option value="OH">OH</option>
+                        <option value="OK">OK</option>
+                        <option value="OR">OR</option>
+                        <option value="PA">PA</option>
+                        <option value="RI">RI</option>
+                        <option value="SC">SC</option>
+                        <option value="SD">SD</option>
+                        <option value="TN">TN</option>
+                        <option value="TX">TX</option>
+                        <option value="UT">UT</option>
+                        <option value="VT">VT</option>
+                        <option value="VA">VA</option>
+                        <option value="WA">WA</option>
+                        <option value="WV">WV</option>
+                        <option value="WI">WI</option>
+                        <option value="WY">WY</option>
+                    </select>
+                    <img  class="correct"  src="../images/correct.png" style="display: none">
+                    <img  class="wrong" src="../images/error.png"  style="display: none">
                 </li>
 
                 <li>
                     <label>Country:<span class="required">*</span></label>
-                    <input type="text" name="state" />
+                    <input class="inputShip validate" type="text" name="state" required />
+                    <img  class="correct"  src="../images/correct.png" style="display: none">
+                    <img  class="wrong" src="../images/error.png"  style="display: none">
                 </li>
 
                 <li>
                     <label>Zipcode:<span class="required">*</span></label>
-                    <input type="number" name="zipcode" />
+                    <input class="inputShip validate zipcode" type="input" name="zipcode" minlength="6" required />
+                    <img  class="correct"  src="../images/correct.png" style="display: none">
+                    <img  class="wrong" src="../images/error.png"  style="display: none">
                 </li>
             </ol>
         </fieldset>
@@ -116,6 +260,6 @@
             <button type="submit" value="Place Order">Place Order</button>
         </fieldset>
     </form>
-
+<script src="../js/billAndShip.js"></script>
 </body>
 </html>
