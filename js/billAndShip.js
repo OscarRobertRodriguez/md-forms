@@ -202,21 +202,3 @@ form.addEventListener('submit', function (event) {
 
 
 
-// function checkIfNameHasSymbols() {
-//    var billName = document.getElementById("billName");
-//    var billNameValue = document.getElementById("billName").value;
-//    var correct = document.getElementById("firstNameCorrect").style;
-//    console.log(validator.withoutSymbols(billNameValue));
-//    console.log(billNameValue.length);
-//
-//    if (validator.withoutSymbols(billNameValue).length !== billNameValue.length) {
-//       billName.setCustomValidity("Please only include letters in your name.");
-//       correct.display ="none";
-//
-//    } else if (validator.withoutSymbols(billNameValue).length === billNameValue.length) {
-//       billName.setCustomValidity("");
-//       correct.display = "inline-block";
-//
-//    }
-//
-// };
