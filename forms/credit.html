@@ -1,98 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Payment</title>
-    <link rel="stylesheet" type="text/css" href="../css/credit/style.css">
+   <meta charset="UTF-8"/>
+   <title>Payment</title>
+   <link rel="stylesheet" type="text/css" href="../css/credit/style.css">
+   <script src="../js/validator.js"></script>
 </head>
 <body>
 
 
 <nav>
-<ul>
-    <li><a href="https://oscarrobertrodriguez.github.io/md-forms">Forms</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/calculator">Calculator</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/product-listing">Product Page</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/learning-web-components/components/buttons">Buttons</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/profile-card">Portfolio Sidebar</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/">Back to Home Page</a></li>
-</ul>
+   <ul>
+      <li><a href="https://oscarrobertrodriguez.github.io/md-forms">Forms</a></li>
+      <li><a href="https://oscarrobertrodriguez.github.io/calculator">Calculator</a></li>
+      <li><a href="https://oscarrobertrodriguez.github.io/product-listing">Product Page</a></li>
+      <li><a href="https://oscarrobertrodriguez.github.io/learning-web-components/components/buttons">Buttons</a></li>
+      <li><a href="https://oscarrobertrodriguez.github.io/profile-card">Portfolio Sidebar</a></li>
+      <li><a href="https://oscarrobertrodriguez.github.io/">Back to Home Page</a></li>
+   </ul>
 </nav>
 
 
+<form id="formCredit">
 
-    <form>
+   <fieldset>
 
-        <fieldset>
+      <legend>Payment Info</legend>
 
-            <legend>Payment Info</legend>
+      <ul>
 
-            <ul>
+         <li>
+            <label>Full Name: <input class="inputs" type="text" id="fullName" placeholder="Bob Marley" min="2" required></label>
+            <img class="correct" src="../images/correct.png" style="display: none">
+            <img class="wrong" src="../images/error.png" style="display: none">
+         </li>
+         <li>
+            <label>Credit Card #: <input class="inputs" type=text minlength="19" maxlength=19 id="creditNum"
+                                         placeholder="xxxx-xxxx-xxxx-xxxx" class="card" required></label>
+            <img class="correct" src="../images/correct.png" style="display: none">
+            <img class="wrong" src="../images/error.png" style="display: none">
+         </li>
+         <li>
+            <label>CSV code: <input class="inputs" type="text" name="text" id="csvCode" minlength="3" maxlength="4" class="csv"
+                                    required></label>
+            <img class="correct" src="../images/correct.png" style="display: none">
+            <img class="wrong" src="../images/error.png" style="display: none">
+         </li>
+         <li>
+            <label>Expiration Month:
+               <select required="" class="inputs" id="month">
+                  <option selected value="">Month</option>
+                  <option>January</option>
+                  <option>January</option>
+                  <option>February</option>
+                  <option>March</option>
+                  <option>April</option>
+                  <option>June</option>
+                  <option>July</option>
+                  <option>August</option>
+                  <option>September</option>
+                  <option>October</option>
+                  <option>November</option>
+                  <option>December</option>
+               </select>
+            </label>
+            <img class="correct" src="../images/correct.png" style="display: none">
+            <img class="wrong" src="../images/error.png" style="display: none">
+         </li>
+         <li>
+            <label>Expiration Year:
+               <select name="year" required="" class="inputs" id="year">
+                  <option selected value="">Year</option>
+                  <option value="">2016</option>
+                  <option value="">2017</option>
+                  <option value="">2018</option>
+                  <option value="">2019</option>
+                  <option value="">2020</option>
+                  <option value="">2021</option>
+                  <option value="">2022</option>
+                  <option value="">2023</option>
+                  <option value="">2024</option>
+                  <option value="">2025</option>
+                  <option value="">2026</option>
+                  <option value="">2027</option>
+                  <option value="">2028</option>
+                  <option value="">2029</option>
+                  <option value="">2030</option>
+                  <option value="">2031</option>
+               </select>
+            </label>
+            <img class="correct" src="../images/correct.png" style="display: none">
+            <img class="wrong" src="../images/error.png" style="display: none">
+         </li>
 
-                <li>
-                    <label>Full Name: <input type="text" name="" placeholder="Bob Marley"></label>
-                </li>
-                <li>
-                    <label>Credit Card #: <input type=text maxlength=19 placeholder="xxxx-xxxx-xxxx-xxxx" class="card"></label>
-                </li>
-                <li>
-
-                    <label>CSV code: <input type="" name="text" maxlength="4" class="csv"></label>
-                </li>
-                <li>
-                    <label>Expiration Month:
-                        <select>
-                            <option selected>January</option>
-                            <option>January</option>
-                            <option>Febuary</option>
-                            <option>March</option>
-                            <option>April</option>
-                            <option>June</option>
-                            <option>July</option>
-                            <option>August</option>
-                            <option>September</option>
-                            <option>Octobert</option>
-                            <option>November</option>
-                            <option>December</option>
-
-                        </select>
-                    </label>
-                </li>
-                <li>
-                    <label>Expiration Year:
-                    <select name="year" id="">
-                        <option value="">2016</option>
-                        <option value="">2017</option>
-                        <option value="">2018</option>
-                        <option value="">2019</option>
-                        <option value="">2020</option>
-                        <option value="">2021</option>
-                        <option value="">2022</option>
-                        <option value="">2023</option>
-                        <option value="">2024</option>
-                        <option value="">2025</option>
-                        <option value="">2026</option>
-                        <option value="">2027</option>
-                        <option value="">2028</option>
-                        <option value="">2029</option>
-                        <option value="">2030</option>
-                        <option value="">2031</option>
-                    </select>
-                    </label>
-                </li>
-
-            </ul>
-        </fieldset>
-            <input type="submit" value="make payment">
-    </form>
+      </ul>
+   </fieldset>
+   <input type="submit" value="make payment">
+</form>
 
 
-
-
-
-
-
-
-
+<script src="../js/credit.js"></script>
 </body>
 </html>

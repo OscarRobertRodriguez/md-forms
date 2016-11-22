@@ -37,7 +37,7 @@ for (var i =0; i < zipcodeCheck.length; i++) {
       var submitButton = document.querySelector(".fieldThree").style;
       var input1 = document.getElementsByClassName("inputShip");
       var legend = document.getElementById("lengend1");
-
+      var stateInput2 = document.getElementById("state2");
 
       if (checkbox.checked === true) {
          fieldTwo.display = "none";
@@ -49,7 +49,7 @@ for (var i =0; i < zipcodeCheck.length; i++) {
          submitButton.width = "400px";
 
          legend.innerText = "Billing And Shipping Address";
-
+          stateInput2.required = false;
 
          for (var i = 0; i < input1.length; i++) {
             input1[i].required = false;
@@ -66,7 +66,7 @@ for (var i =0; i < zipcodeCheck.length; i++) {
       var submitButton = document.querySelector(".fieldThree").style;
       var input1 = document.getElementsByClassName("inputShip");
       var legend = document.getElementById("lengend1");
-      var t = document.createTextNode(" and Shipping Address");
+      var stateInput2 = document.getElementById("state2");
 
 
       if (checkbox.checked === true) {
@@ -76,6 +76,7 @@ for (var i =0; i < zipcodeCheck.length; i++) {
          fieldOne.setProperty("border-right", "none");
          submitButton.width = "828px";
          legend.innerText = "Billing Address";
+         stateInput2.required = true;
 
          for (var i = 0; i < input1.length; i++) {
             input1[i].required = true;
@@ -119,7 +120,7 @@ function checkIfStateEntered (event) {
    var inputText = parent.value;
    var correctImg = parent.nextSibling.nextSibling;
    var wrongImg = correctImg.nextSibling.nextSibling;
-   console.log(parent.value);
+
 
 
    if(inputText.length == 2) {
@@ -140,7 +141,7 @@ function justNumberCheck (event) {
    var correctImg = parent.nextSibling.nextSibling;
    var wrongImg = correctImg.nextSibling.nextSibling;
 
-   console.log(inputText);
+   
 
    if(validator.justNumbers(inputText).length !== inputText.length) {
       parent.setCustomValidity("Only include numbers for your zipcode");
@@ -173,13 +174,13 @@ function checkIfNameHasSymbols(event) {
 
    // if statement that checks the billing name is correct
    // if it is'nt correct display red warning
-   if (validator.withoutSymbols(inputText).length !== inputText.length) {
+   if (validator.withoutSymbolsNumbers(inputText).length !== inputText.length) {
       parent.setCustomValidity("Only include letters in your name.");
       correctImg.style.display ="none";
       wrongImg.style.display ="inline-block";
    }
    // if it is correct display checkmark img
-   else if (validator.withoutSymbols(inputText).length === inputText.length) {
+   else if (validator.withoutSymbolsNumbers(inputText).length === inputText.length) {
       parent.setCustomValidity("");
       correctImg.style.display = "inline-block";
       wrongImg.style.display = "none";
