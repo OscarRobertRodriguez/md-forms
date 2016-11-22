@@ -64,10 +64,6 @@
       if (input === undefined) {
          throw new Error("parameter is missing");
       }
-      if (!input) {
-         alert("empty string");
-      }
-
       var alphaNum = '1234567890',
 
 
@@ -89,6 +85,96 @@
    };
 
 
+   // 3. remove symbols and numbers from check
+   validator.withoutSymbolsNumbers = function (input) {
+
+      if (input === undefined) {
+         throw new Error("parameter is missing");
+      }
+      if (!input) {
+         alert("empty string");
+      }
+
+      var alphaNum = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+
+
+          newStr = '';
+
+
+      for (var i = 0; i < input.length; i++) {
+
+
+         if (alphaNum.indexOf(input.charAt(i)) !== -1 || alphaNum.toLowerCase().indexOf(input.charAt(i)) !== -1 || input.charAt(i) === " ") {
+
+            newStr += input.charAt(i);
+         }
+      }
+
+
+      return newStr.trim();
+
+   };
+
+
+   validator.symbolsHyphenOnly = function (input) {
+      if (input === undefined) {
+         throw new Error("parameter is missing");
+      }
+
+      var alphaNum = '-',
+
+
+          newStr = '';
+
+
+      for (var i = 0; i < input.length; i++) {
+
+
+         if (alphaNum.indexOf(input.charAt(i)) !== -1 || input.charAt(i) === " ") {
+
+            newStr += input.charAt(i);
+         }
+      }
+
+
+      return newStr.trim();
+
+
+   }
+
+
+
+
+   //  remove symbols and letter for credit card number check
+   validator.withoutSymbolsCredit = function (input) {
+
+      if (input === undefined) {
+         throw new Error("parameter is missing");
+      }
+
+      var alphaNum = '0123456789-',
+
+
+          newStr = '';
+
+
+      for (var i = 0; i < input.length; i++) {
+
+
+         if (alphaNum.indexOf(input.charAt(i)) !== -1 || alphaNum.toLowerCase().indexOf(input.charAt(i)) !== -1 || input.charAt(i) === " " || input.charAt(i) === "-") {
+
+            newStr += input.charAt(i);
+         }
+      }
+
+
+      return newStr.trim();
+
+   };
+
+
+
+
    // 3. remove symbols
    validator.withoutSymbols = function (input) {
 
@@ -99,7 +185,7 @@
          alert("empty string");
       }
 
-      var alphaNum = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+      var alphaNum = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789',
 
 
           newStr = '';
@@ -409,7 +495,7 @@
    };
 
 
-   // 15 counts the number of words
+   // 15 counts the number of words for this we will only consider groups of letters as words
    validator.countWords = function (input) {
 
       if (input === undefined) {
@@ -417,7 +503,7 @@
       }
 
 
-      var alphaNum = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789',
+      var alphaNum = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 
 
           newStr = '';
@@ -558,8 +644,21 @@
 
 // 20
    validator.isCreditCard = function (input) {
-      var newInput = this.withoutSymbols(input);
-      if (newInput.length === 16) {
+      var newInput = this.withoutSymbolsCredit(input);
+      var hyphenArray = [];
+
+
+      for(var i = 0; i < newInput.length;i++) {
+         if(newInput.charAt(i) === "-") {
+            hyphenArray.push(i);
+         }
+      }
+
+      if (hyphenArray[0] === 4 && hyphenArray[1] === 9 && hyphenArray[2] === 14) {
+         hyphenArray.push("true");
+      }
+
+      if (newInput.length === 19 && this.justNumbers(input).length === 16 && hyphenArray[3] === "true" ) {
          return true;
       }
       else {
