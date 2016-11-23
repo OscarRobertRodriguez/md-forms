@@ -1,81 +1,57 @@
-
-<!-- Creation Date: July 1 , 2016 -->
-
-
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
-    <meta charset="UTF-8" />
-    <title>Sign Up</title>
-<link rel="stylesheet" type="text/css" href="../css/signUp/style.css">
-<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <link rel="stylesheet" href="CSS/main.css">
+
+   <style>
+      .backgroundWrap {
+         position: fixed;
+         width: 100%;
+         height: 100%;
+         z-index: -1000;
+         overflow: hidden;
+         top:0;
+         left: 0;
+      }
+
+
+      #videoBg {
+         position: absolute;
+         top:0;
+         left: 0;
+         min-height: 100%;
+         min-width: 100%;
+      }
+
+   </style>
 </head>
-
-
-
 <body>
 
-<nav>
-<ul>
-    <li><a href="https://oscarrobertrodriguez.github.io/md-forms">Forms</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/calculator">Calculator</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/product-listing">Product Page</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/learning-web-components/components/buttons">Buttons</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/profile-card">Portfolio Sidebar</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/">Back to Home Page</a></li>
-</ul>
-</nav>
 
+<div class="backgroundWrap">
 
-<h1>Start Your World Domination Today</h1>
+<video id="videoBg" autoplay loop preload="auto" muted>
+   <source src="video/Space%20-%202381.mp4" type="video/mp4">
 
+</video>
+</div>
 
 
 <form>
-<fieldset class="formInput">
-
-<legend><span>Sign Up</span></legend>
-
-<ol>
-<li>
-<label for="firstName">First Name:</label>
-<input type="text" name="firstName" id="firstName">
-</li>
-
-<li>
-<label for="lastName">Last Name:</label>
-<input type="text" name="lastName" id="lastName">
-</li>
-
-<li>
-<label for="email">Email:</label>
-<input type="email" name="email" id="email">
-</li>
-
-<li>
-<label for="dateOfBirth">Date of Birth:</label>
-<input type="date" name="dateOfBirth" id="dateOfBirth">
-</li>
-
-<li>
-<label for="password">Password:</label>
-<input type="password" name="password" id="password">
-</li>
-
-</ol>
-</fieldset>
-
-<fieldset class="submit">
-<input  class="button" type="submit" name="submit" value="Submit">
-</fieldset>
-
+   <h1>Join StarLight</h1>
+   <fieldset class="loginInfo">
+   <input class="inputBox" type="text" placeholder="first name">
+   <input class="inputBox" type="text" placeholder="last name">
+   <input class="inputBox" type="text" placeholder="email">
+   <input class="inputBox" type="text" placeholder="date of birth">
+   <input class="inputBox" type="text" placeholder="password">
+    </fieldset>
+   <fieldset>
+      <button  type="submit">Log In</button>
+   </fieldset>
 </form>
-
-<footer>
-<p>Copyright &copy; protected by Ninja Turtels since 1984</p>
-</footer>
 
 </body>
 </html>
