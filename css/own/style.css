@@ -436,6 +436,7 @@ textarea {
 form {
 	margin: 0 auto;
 	width: 600px;
+    position: relative;
 }
 
 .content-area {
