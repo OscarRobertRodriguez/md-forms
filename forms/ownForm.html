@@ -5,6 +5,7 @@
     <title>My Form</title>
     <link rel="stylesheet" type="text/css" href="../css/own/style.css">
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'>
+    <script src="../js/validator.js"></script>
 </head>
 <body>
 
@@ -34,15 +35,20 @@
  </strong>
 </p>
 <hr>
-<form id="hello_form" method="post" class="hello">
+<form id="hello_form"  class="hello">
     <h3>
     <label for="contactName">Hello, my name is</label>
-    <input type="text" name="contactName" id="contactName" placeholder="first and last" value class="requiredField">
+    <input type="text" name="contactName" id="fullName" placeholder="first and last" class="inputs" value required>
+       <img class="correct" src="../images/correct.png" style="display: none">
+       <img class="wrong" src="../images/error.png" style="display: none">
     <label for="email">and my email address is</label>
-    <input type="email" name="email" id="email" placeholder="name@domain.com" value class="requiredField email">
+    <input type="email" name="email" id="emailInput" placeholder="name@domain.com" value class="inputs email">
+       <img class="correct" src="../images/correct.png" style="display: none">
+       <img class="wrong" src="../images/error.png" style="display: none">
     <label for"service">I'd like<label>
     <div class="select-styled">
-        <select name="service" id="service">
+        <select name="service" id="service" required="" class="inputs">
+          <option value="" selected>Choose</option>
           <option value="a website">a website</option>
           <option value="an app">an app</option>
           <option value="a logo">a logo</option>
@@ -51,10 +57,12 @@
           <option value="to say hello">to say hello</option>
         </select>
         <span class="select-arrow"></span>
+       <img class="correct" src="../images/correct.png" style="display: none">
+       <img class="wrong" src="../images/error.png" style="display: none">
     </div>
     <label for="budget">and my budget is</label>
     <div class="select-styled">
-        <select name="budget" id="budget">
+        <select name="budget" id="budget" class="inputs">
            <option value="unlimited">unlimited ;-)</option>
            <option value="under $5,000">under $5,000</option>
            <option value="$5,000 - $10,000">$5000 - $10000</option>
@@ -62,10 +70,12 @@
            <option value="$20,000 - $50,000">$20,000 - $50,000</option>
         </select>
         <span class="select-arrow"></span>
+       <img class="correct" src="../images/correct.png" style="display: none">
+       <img class="wrong" src="../images/error.png" style="display: none">
     </div>
     <br>
     <label for="commentsText">Here are some more details:</label>
-    <textarea name="comments" placeholder="Message" id="commentsText" class="requiredField" rows="4"></textarea>
+    <textarea name="comments" placeholder="Message" id="commentsText"  rows="4"></textarea>
     </h3>
     <button type="submit">
         <h4>Looks Good? Sent it.</h4>
@@ -80,6 +90,6 @@
 <hr>
 
 <footer>Developer since now</footer>
-
+<script src="../js/ownForm..js"></script>
 </body>
 </html>
