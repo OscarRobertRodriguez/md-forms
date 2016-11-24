@@ -212,12 +212,8 @@
          throw new Error("parameter is missing");
       }
       var date = new Date(input);
-
-      if (!input) {
-         alert("you did not input anything");
-      }
+      
       if (isNaN(date.getTime()) && input.length > 0) {
-         alert("date is invalid please include valid date");
          return false;
       }
       else if (Object.prototype.toString.call(date) === '[object Date]') {
