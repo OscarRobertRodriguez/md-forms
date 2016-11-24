@@ -4,33 +4,47 @@
    <meta charset="UTF-8">
    <title>Title</title>
    <link rel="stylesheet" href="../css/signUp/style.css">
-
+   <script src="../js/validator.js"></script>
 </head>
 <body>
 
 
 <div class="backgroundWrap">
 
-<video id="videoBg" autoplay loop preload="auto" muted>
-   <source src="../video/Space - 2381.mp4" type="video/mp4">
+   <video id="videoBg" autoplay loop preload="auto" muted>
+      <source src="../video/Space - 2381.mp4" type="video/mp4">
 
-</video>
+   </video>
 </div>
 
-
-<form>
+<form id="form1">
    <h1>Join StarLight</h1>
    <fieldset class="loginInfo">
-   <input class="inputBox" type="text" placeholder="first name">
-   <input class="inputBox" type="text" placeholder="last name">
-   <input class="inputBox" type="text" placeholder="email">
-   <input class="inputBox" type="text" placeholder="date of birth">
-   <input class="inputBox" type="text" placeholder="password">
-    </fieldset>
+      <input class="inputBox inputs" id="firstName" type="text" placeholder="first name" minlength="2" required>
+      <img class="correct" src="../images/correct.png" style="display: none">
+      <img class="wrong" src="../images/error.png" style="display: none">
+
+      <input class="inputBox inputs" id="lastName" type="text" placeholder="last name" minlength="2" required>
+      <img class="correct" src="../images/correct.png" style="display: none">
+      <img class="wrong" src="../images/error.png" style="display: none">
+
+      <input class="inputBox inputs" id="emailInput" type="email" placeholder="email" required>
+      <img class="correct" src="../images/correct.png" style="display: none">
+      <img class="wrong" src="../images/error.png" style="display: none">
+
+      <input class="inputBox inputs" id="date" type="text" placeholder="date of birth" required>
+      <img class="correct" src="../images/correct.png" style="display: none">
+      <img class="wrong" src="../images/error.png" style="display: none">
+
+      <input class="inputBox inputs" id="password" type="text" placeholder="password" minlength="8" required>
+      <img class="correct" src="../images/correct.png" style="display: none">
+      <img class="wrong" src="../images/error.png" style="display: none">
+
+   </fieldset>
    <fieldset>
-      <button  type="submit">Log In</button>
+      <button type="submit">Log In</button>
    </fieldset>
 </form>
-
+<script src="../js/signUP.js"></script>
 </body>
 </html>

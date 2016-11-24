@@ -57,6 +57,7 @@ form {
     height: auto;
     border-radius: 4px;
     overflow: hidden;
+    position: relative;
 }
 
 form > h1 {
@@ -97,8 +98,8 @@ fieldset {
     height: 50px;
     margin: 15px auto;
     border-radius: 5px;
-    text-transform: capitalize;
-    font-size: 1rem;
+    text-transform: lowercase;
+    font-size: .9rem;
     border: none;
     outline: none;
     line-height: 1;
