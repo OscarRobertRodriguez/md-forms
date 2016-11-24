@@ -13,6 +13,7 @@ for(i=0; i < validate.length; i++){
    validate[i].addEventListener("change", validateMyForm,false);
 }
 
+console.log(validator.birthDateAge("12/12/1989"));
 
 function validateMyForm(event) {
 
@@ -137,6 +138,7 @@ function validateMyForm(event) {
    }
 
    if(id === "emailInput") {
+
       if(input.validity.typeMismatch === false) {
          input.setCustomValidity("");
          correctImg.style.display = "inline-block";
@@ -156,8 +158,8 @@ function validateMyForm(event) {
    }
 
  if(id === "date"){
-    if(validator.isDate(inputValue) === false){
-       input.setCustomValidity("Include a valid date. Valid date is written as month/day/year");
+    if (inputValue.length < 8 && inputValue.length !== 8){
+       input.validationMessage;
        input.style.border = "2px solid red";
        wrongImg.style.display = "inline-block";
        correctImg.style.display = "none";
@@ -166,6 +168,38 @@ function validateMyForm(event) {
        wrongImg.style.top = "300px";
        wrongImg.style.right = "30px";
     }
+
+    else if(validator.isDate(inputValue) === false ) {
+       input.setCustomValidity("Include a valid date. Valid date is written as month/day/year");
+       input.style.border = "2px solid red";
+       wrongImg.style.display = "inline-block";
+       correctImg.style.display = "none";
+       wrongImg.style.position = "absolute";
+       input.style.color = "red";
+       wrongImg.style.top = "320px";
+       wrongImg.style.right = "30px";
+    }
+        else if (validator.isBeforeToday(inputValue) === false  ) {
+       input.setCustomValidity("Not a valid date can not be after today");
+       input.style.border = "2px solid red";
+       wrongImg.style.display = "inline-block";
+       correctImg.style.display = "none";
+       wrongImg.style.position = "absolute";
+       input.style.color = "red";
+       wrongImg.style.top = "320px";
+       wrongImg.style.right = "30px";
+    }
+        else if (validator.birthDateAge(inputValue) < 18 && validator.birthDateAge(inputValue) !== 18) {
+       input.setCustomValidity("Must be 18 years or older");
+       input.style.border = "2px solid red";
+       wrongImg.style.display = "inline-block";
+       correctImg.style.display = "none";
+       wrongImg.style.position = "absolute";
+       input.style.color = "red";
+       wrongImg.style.top = "320px";
+       wrongImg.style.right = "30px";
+    }
+
     else {
        input.setCustomValidity("");
        correctImg.style.display = "inline-block";
@@ -173,10 +207,12 @@ function validateMyForm(event) {
        input.style.border = "2px solid green";
        correctImg.style.position = "absolute";
        input.style.color = "green";
-       correctImg.style.top = "300px";
+       correctImg.style.top = "310px";
        correctImg.style.right = "30px";
     }
  }
+
+
 
 if(id === "password") {
    if(inputValue.length < 8 && inputValue.length !== 8) {
