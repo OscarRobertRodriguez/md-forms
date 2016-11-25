@@ -1,45 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../css/colorBuilder/style.css">
+   <meta charset="UTF-8"/>
+   <title>Document</title>
+   <link rel="stylesheet" type="text/css" href="../css/colorBuilder/style.css">
+   <script src="../js/validator.js"></script>
 </head>
 <body>
 
 <nav>
-<ul>
-    <li><a href="https://oscarrobertrodriguez.github.io/md-forms">Forms</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/calculator">Calculator</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/product-listing">Product Page</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/learning-web-components/components/buttons">Buttons</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/profile-card">Portfolio Sidebar</a></li>
-    <li><a href="https://oscarrobertrodriguez.github.io/">Back to Home Page</a></li>
-</ul>
+   <ul>
+      <li><a href="https://oscarrobertrodriguez.github.io/md-forms">Forms</a></li>
+      <li><a href="https://oscarrobertrodriguez.github.io/calculator">Calculator</a></li>
+      <li><a href="https://oscarrobertrodriguez.github.io/product-listing">Product Page</a></li>
+      <li><a href="https://oscarrobertrodriguez.github.io/learning-web-components/components/buttons">Buttons</a></li>
+      <li><a href="https://oscarrobertrodriguez.github.io/profile-card">Portfolio Sidebar</a></li>
+      <li><a href="https://oscarrobertrodriguez.github.io/">Back to Home Page</a></li>
+   </ul>
 </nav>
 
 
-<div class="sliders skin-slider">
-    <dl>
-        <dt>R:<span id="r-val" class="val"></span></dt><dd id="r-slider"><input name="red" class="red" type="range" min="0" max="255" step="5" value="0"></dd>
-        <dt>G:<span id="g-val" class="val"></span></dt><dd id="g-slider"><input name="green" class="green" type="range" min="0" max="255" step="5" value="0"></dd>
-        <dt>B:<span id="b-val" class="val"></span></dt><dd id="b-slider"><input name="blue" class="blue" type="range" min="0" max="255" step="5" value="0"></dd>
-        <dt>Alpha:<span id="a-val" class="val"></span></dt><dd id="a-slider"><input name="alpha" type="range" min="0" max="1" step="0.01" value="1"></dd>
+<div class="sliders skin-slider" id="slider">
+   <dl>
+      <dt>
+         R:<span id="r-val" class="val"></span>
+      </dt>
+      <dd id="r-slider">
+         <input name="red" class="red inputs" type="range" min="0" max="255" step="5" value="0">
+         <img class="correct" src="../images/correct.png" style="display: none">
+         <img class="wrong" src="../images/error.png" style="display: none">
+      </dd>
 
-    </dl>
+      <dt>
+         G:<span id="g-val" class="val"></span>
+      </dt>
+      <dd id="g-slider">
+         <input name="green" class="green inputs" type="range" min="0" max="255" step="5" value="0">
+         <img class="correct" src="../images/correct.png" style="display: none">
+         <img class="wrong" src="../images/error.png" style="display: none">
+      </dd>
+
+      <dt>
+         B:<span id="b-val" class="val"></span>
+      </dt>
+      <dd id="b-slider">
+         <input name="blue" class="blue inputs" type="range" min="0" max="255" step="5" value="0">
+         <img class="correct" src="../images/correct.png" style="display: none">
+         <img class="wrong" src="../images/error.png" style="display: none">
+      </dd>
+
+      <dt>
+         Alpha:<span id="a-val" class="val"></span>
+      </dt>
+      <dd id="a-slider">
+         <input name="alpha" class="inputs" type="range" min="0" max="1" step="0.01" value="1">
+         <img class="correct" src="../images/correct.png" style="display: none">
+         <img class="wrong" src="../images/error.png" style="display: none">
+      </dd>
+
+   </dl>
 
 </div>
 
 <div class="color"></div>
 <div class="output">
-    <dl>
-        <dt>Hex:</dt><dd id="hex"></dd>
-        <dt>RGB:</dt><dd id="rgb"></dd>
-        <dt>HSL:</dt><dd id="hsl"></dd>
+   <dl>
+      <dt>Hex:</dt>
+      <dd id="hex"></dd>
+      <dt>RGB:</dt>
+      <dd id="rgb"></dd>
+      <dt>HSL:</dt>
+      <dd id="hsl"></dd>
 
-    </dl>
+   </dl>
 </div>
-
+<script src="../js/color.js"></script>
 </body>
 </html>
 

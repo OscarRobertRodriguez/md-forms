@@ -70,6 +70,9 @@ nav ul a:active {
 /*End Navigation*/
 
 
+#slider {
+    margin-left: 750px;
+}
 
 .sliders {
     margin-top: 10em;
@@ -118,4 +121,8 @@ nav ul a:active {
     height: 40px;
     line-height: 40px;
     margin: 0;
+}
+
+.slider dd {
+    position: relative;
 }
