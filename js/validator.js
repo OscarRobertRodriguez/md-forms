@@ -47,10 +47,6 @@
       else if (input.length === 11 && input.charAt(0) === "1" && !isNaN(Number(input))) {
          return true;
       }
-      else if (!input) {
-         alert("you have an empty string");
-         return false;
-      }
       else {
          return false;
       }
@@ -341,6 +337,7 @@
 
    };
 
+   // function that validates the age of from birth date
    validator.birthDateAge = function(input){
      var today = new Date(),
          todayYear = today.getFullYear(),
